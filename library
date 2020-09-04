@@ -1,0 +1,20 @@
+function js(selector) {
+  const self = {
+   addText: function(msg, color) {
+     var txt = document.createElement("p");
+     txt.style.color = color;
+     selector.appendChild(txt);
+     txt.innerHTML = msg;
+   },
+   innerText: function(msg, color) {
+     selector.innerHTML = "<p style='color:" + color + "'>" + msg + "</p>";
+   },
+    appendText: function(msg, color) {
+       var txt = document.createElement("p");
+     txt.style.color = color;
+     selector.insertBefore(txt, selector.firstChild);
+     txt.innerHTML = msg;
+  }
+  }
+  return self;
+}
